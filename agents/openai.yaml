@@ -1,0 +1,3 @@
+interface:
+  display_name: "论文 Slides"
+  short_description: "沿用现有 SJTUBeamer 项目制作论文汇报，展开数学推导并整理 PDF 图片"

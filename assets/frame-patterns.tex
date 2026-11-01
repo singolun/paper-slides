@@ -1,0 +1,57 @@
+% 局部参考模式，不是主模板。仅选择所需 frame 并替换全部占位词。
+% 不要直接 include 本文件，不要复制进主文件的导言区。
+
+% ---------- 重要逻辑节点：延续现有整页大字风格 ----------
+\begin{frame}
+    \centering
+    {\LARGE\bfseries 在此提出本篇论文真正需要回答的关键问题\par}
+    \vfill
+    {\small 用一句话提示连接当前障碍与下一步推导的工具\par}
+\end{frame}
+
+% ---------- 正式结果：先说明前提，再解释结论 ----------
+% Source: 此处记录原文 theorem/equation/page 定位。
+\begin{frame}{本页要建立的核心结论}
+    \small
+    \begin{block}{设定与条件}
+        在此给出本结论涉及的对象、参数、定义域和必要假设。
+    \end{block}
+    \begin{alertblock}{结果（原文编号）}
+        在此写出经过核对的完整数学陈述。
+    \end{alertblock}
+    \textbf{含义：}说明结论为何解决当前问题，以及下一步将如何使用它。
+\end{frame}
+
+% ---------- 连续推导页：按一个变换拆页 ----------
+\begin{frame}{推导的当前步骤及目标}
+    \small
+    \textbf{起点：}用上一页得到的关系或明确前提开始。
+    \begin{block}{本步推导}
+        用 aligned/align* 写真实推导，非显然步骤标明依据。
+    \end{block}
+    \textbf{本步依据：}说明引理、换元、最优化或积分交换的适用条件。
+
+    \vspace{0.5ex}
+    \alert{用一句话说明本步结论怎样进入后续论证。}
+\end{frame}
+
+% ---------- 图片与解释：使用 main.tex 已有 graphicspath ----------
+% Source: 原文 Figure 编号、PDF 页码、原文件和裁切方式。
+\begin{frame}{图片检验的具体问题}
+    \small
+    \begin{columns}[T,onlytextwidth]
+        \begin{column}{0.55\textwidth}
+            \centering
+            \includegraphics[width=\linewidth,height=0.57\textheight,keepaspectratio]
+                {paperX/descriptive-name.pdf}
+
+            {\footnotesize 原文 Figure 编号及必要的设置说明\par}
+        \end{column}
+        \begin{column}{0.42\textwidth}
+            \begin{block}{如何读图}
+                说明坐标、指标方向、比较条件及关键观测。
+            \end{block}
+            \alert{只陈述图片和原文实际支持的结论。}
+        \end{column}
+    \end{columns}
+\end{frame}
